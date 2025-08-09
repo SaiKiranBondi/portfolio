@@ -1,0 +1,19 @@
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-img {
+  width: 200px;
+  border-radius: 50%;
+}
+.hero-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #007acc;
+}

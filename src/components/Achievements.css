@@ -1,0 +1,8 @@
+.achievements {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+.achievements ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}

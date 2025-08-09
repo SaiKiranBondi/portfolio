@@ -1,0 +1,17 @@
+.skills {
+  padding: 2rem;
+}
+.skill-category {
+  margin-bottom: 1.5rem;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-tag {
+  background-color: #007acc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}

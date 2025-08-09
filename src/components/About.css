@@ -1,0 +1,18 @@
+.about {
+  padding: 2rem;
+}
+
+.about-content-wrapper {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.education-item {
+  margin-bottom: 1rem;
+  border-left: 3px solid #007acc;
+  padding-left: 1rem;
+}
+.fun-facts ul {
+  list-style: none;
+  padding: 0;
+}

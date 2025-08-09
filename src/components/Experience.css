@@ -1,0 +1,19 @@
+.experience {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.experience-content-wrapper {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.experience-item {
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #007acc;
+  padding-left: 1rem;
+}
+.duration {
+  font-style: italic;
+  color: #666;
+}
