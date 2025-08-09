@@ -1,6 +1,6 @@
-import React from 'react';
-import './About.css';
-import data from '../data';
+import React from "react";
+import "../styles/About.css";
+import data from "../data";
 
 function About() {
   const { education } = data.about;
@@ -11,7 +11,9 @@ function About() {
         <div className="education">
           {education.map((item, index) => (
             <div key={index} className="education-item">
-              <h4>{item.degree} from {item.school} ({item.year})</h4>
+              <h4>
+                {item.degree} from {item.school} ({item.year})
+              </h4>
               <p>CGPA: {item.cgpa}</p>
             </div>
           ))}

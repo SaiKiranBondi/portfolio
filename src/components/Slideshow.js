@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './Slideshow.css';
+import React, { useState, useEffect } from "react";
+import "../styles/Slideshow.css";
 
 const Slideshow = () => {
   const [images, setImages] = useState([]);
@@ -12,7 +12,11 @@ const Slideshow = () => {
     };
 
     try {
-      const imageContext = require.context('../../public/images/slideshow', false, /\.(png|jpe?g|svg)$/);
+      const imageContext = require.context(
+        "../../public/images/slideshow",
+        false,
+        /\.(png|jpe?g|svg)$/
+      );
       setImages(importAll(imageContext));
     } catch (error) {
       console.error("Error importing slideshow images:", error);
@@ -49,7 +53,7 @@ const Slideshow = () => {
         {images.map((_, index) => (
           <span
             key={index}
-            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            className={`dot ${index === currentIndex ? "active" : ""}`}
             onClick={() => goToSlide(index)}
           ></span>
         ))}

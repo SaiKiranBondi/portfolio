@@ -1,6 +1,6 @@
-import React from 'react';
-import './Achievements.css';
-import data from '../data';
+import React from "react";
+import "../styles/Achievements.css";
+import data from "../data";
 
 function Achievements() {
   const { achievements } = data;

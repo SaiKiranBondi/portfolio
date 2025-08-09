@@ -1,10 +1,12 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Sai Kiran Bondi. All rights reserved.</p>
+      <p>
+        &copy; {new Date().getFullYear()} Sai Kiran Bondi. All rights reserved.
+      </p>
     </footer>
   );
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import './Experience.css';
-import data from '../data';
+import React from "react";
+import "../styles/Experience.css";
+import data from "../data";
 
 function Experience() {
   const { experience } = data;
@@ -11,7 +11,9 @@ function Experience() {
         <div className="experience-timeline">
           {experience.map((job, index) => (
             <div key={index} className="experience-item">
-              <h3>{job.role} at {job.company}</h3>
+              <h3>
+                {job.role} at {job.company}
+              </h3>
               <p className="duration">{job.duration}</p>
               <ul>
                 {job.highlights.map((highlight, i) => (

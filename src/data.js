@@ -222,7 +222,7 @@ Instead of dealing with breaking updates, you build AI workflows your way:
   },
   achievements: [
     "Won Vashisht ML Hackathon 2024",
-    "1st in Prompt Engineering 2025",
+    "1st in Vashisht Prompt Engineering 2025",
   ],
   contact: {
     email: "amsaikiran01@gmail.com",
