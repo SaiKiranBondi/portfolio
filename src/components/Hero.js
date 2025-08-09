@@ -8,7 +8,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content-wrapper">
-        <img src={profileImage} alt="Profile" className="hero-img" />
+        <img src={process.env.PUBLIC_URL + profileImage} alt="Profile" className="hero-img" />
         <h1>{name}</h1>
         <h2>{tagline}</h2>
         <p>{intro}</p>
