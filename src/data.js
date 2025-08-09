@@ -85,33 +85,140 @@ const portfolioData = {
   ],
   currentProjects: [
     {
-      title: "LLM Optimization Toolkit",
-      desc: "Working on optimizing inference pipelines",
-      img: "/images/project1.png",
+      title: "CollabGraph",
+      desc: `Imagine if **LinkedIn, GitHub, and a hackathon matchmaking tool** had a smart AI baby. CollabGraph:
+-   Finds people working on ideas like yours.
+-   Shows you exactly how your work overlaps.
+-   Lets you connect instantly without oversharing until you’re ready.
+
+The funny part? While building CollabGraph the first time, _I’d probably need help myself_. But once it’s ready, I’ll never have to go hunting again, I can just click a button, raise a “help ticket” to my network and beyond, and get my own AI-powered buddy to bring in the right people fast. From there, we can collaborate directly, track progress, and even meet locally if it makes sense.`,
+      fullDescription: `
+_A smart platform to discover, match, and collaborate on projects with like-minded people._
+
+### Core Idea
+
+Imagine if **LinkedIn, GitHub, and a hackathon matchmaking tool** had a smart AI baby. CollabGraph:
+-   Finds people working on ideas like yours.
+-   Shows you exactly how your work overlaps.
+-   Lets you connect instantly without oversharing until you’re ready.
+
+The funny part? While building CollabGraph the first time, _I’d probably need help myself_. But once it’s ready, I’ll never have to go hunting again, I can just click a button, raise a “help ticket” to my network and beyond, and get my own AI-powered buddy to bring in the right people fast. From there, we can collaborate directly, track progress, and even meet locally if it makes sense.
+
+### Why People Will Care
+
+- You can find collaborators _or_ quick problem-solvers instantly.
+- You control exactly what you share and when.
+- Collaboration becomes as easy as posting a help request.
+- Visual, engaging, and eliminates cold networking.
+
+### Key Features
+
+1. **LinkedIn Integration** – Pull public project and skill data from your connections to see what they’re working on.
+2. **Interest & Project Flags** – Tag your projects with specific categories (e.g., AI, EdTech, IoT) to make them discoverable.
+3. **Controlled Context Sharing** – Decide exactly what information is shared for matching.
+4. **Smart Match Engine** – AI-powered keyword and semantic matching to find relevant people and projects.
+5. **Match Graph Visualization** – Interactive maps showing overlaps and closest matches.
+6. **Help Ticket System (“Buddy Mode”)** – One-click broadcast for assistance to network + community.
+7. **Expert Linking** – Auto-suggest experts when a problem is flagged.
+8. **Location-Based Meetups** – Suggest in-person meetups for nearby collaborators.
+9. **Connection Requests** – “Connect to Collaborate” with optional staged intros.
+10. **Two-Way Bot Intro** – AI-mediated starter conversation before direct chat.
+11. **Progress Sharing & Tracking** – Link repos, share updates, and track milestones.`,
+      tech: ["LLM", "Agents", "Google ADK", "Vector DB"],
     },
     {
-      title: "Learning Graph Databases",
-      desc: "Exploring Neo4j and its AI integrations",
-      img: "/images/project2.png",
+      title: "LangForge",
+      desc: `LangForge is your **personal AI automation toolkit** a stable, modular version of LangChain you can fully control.
+Instead of dealing with breaking updates, you build AI workflows your way:
+-   Load PDFs into structured data.
+-   Extract insights using Google’s NLP tools.
+-   Process scanned docs with OCR.
+-   Chain everything with your own custom agents.
+
+You decide what tools plug in, and you keep the power to adapt no vendor lock-in, no chaos.`,
+      fullDescription: `
+_A stable, modular alternative to LangChain, fully under your control._
+
+### Core Idea
+
+LangForge is your **personal AI automation toolkit** a stable, modular version of LangChain you can fully control.
+Instead of dealing with breaking updates, you build AI workflows your way:
+-   Load PDFs into structured data.
+-   Extract insights using Google’s NLP tools.
+-   Process scanned docs with OCR.
+-   Chain everything with your own custom agents.
+
+### Why People Will Care
+
+- Keeps working even when the AI ecosystem changes.
+- No vendor lock-in or surprise breaking changes.
+- Lets you combine your own tools into powerful custom AI pipelines.
+- Perfect for developers who want document processing without bloated frameworks.
+
+### Key Features
+
+1. **Stable Core Wrapper** – Modular Python framework to connect LLMs, tools, and workflows without dependency breakage.
+2. **Custom PDF Loader** – Convert PDFs directly into structured JSON with metadata.
+3. **LangExtract Integration** – Use Google’s NLP tools for entity/context extraction.
+4. **IntelliPDF** – Combine OCR + LangExtract + AI agents for scanned or complex PDFs.
+5. **MCP Integration** – Custom Model Control Points for domain-specific processing.
+6. **Extensible Agents** – Add new tools and chain logic without altering the base system.
+7. **Plugin Store** – Drop-in modules for loaders, parsers, and connectors.`,
+      tech: ["LangChain", "OCR", "NLP", "Agents"],
     },
   ],
   pastProjects: [
     {
-      title: "ML Studio",
-      desc: "Hackathon-winning ML model selector",
-      tech: ["TensorFlow", "Streamlit"],
+      title: "GoLLM Survey Analytics Tool",
+      desc: `Upload CSV/Excel data to generate AI-powered survey analytics reports with quantitative/qualitative insights, intelligent summarization, and automated reporting.`,
+      fullDescription: `
+      _Upload CSV/Excel data to generate AI-powered survey analytics reports with quantitative/qualitative insights, intelligent summarization, and automated reporting._
+
+      Developed an AI-powered survey analytics platform that transforms raw tabular data (Excel/CSV) into professional, insightful DocX reports with automated visuals. This first version, now in production with continuous updates, provides:
+- Quantitative and Qualitative analysis using advanced LLM-based insights.
+- Semantic clustering and pattern recognition for intelligent summarization and sub-topic discovery.
+- Automated visualization of key findings.
+- A seamless flow from raw data to comprehensive, visually rich reports.`,
+      tech: ["FastAPI", "React", "PostgreSQL", "Redis", "LangChain"],
     },
     {
-      title: "Video-RAG",
-      desc: "AI video search engine",
-      tech: ["FastAPI", "Qdrant"],
+      title: "Video-RAG System",
+      desc: `Ask questions about videos or YouTube playlists and get precise answers with timestamp links.`,
+      fullDescription: `
+      _Ask questions about videos or YouTube playlists and get precise answers with timestamp links._
+      Developed a Video-RAG system for a client, enabling intelligent search and retrieval from video collections. Key features include:
+- Utilized python-scenedetect to automatically identify and capture important scenes based on content changes.
+- Processed both visual and audio streams to generate comprehensive transcript data.
+- Implemented a robust retrieval system with extensive support for various Indian languages.`,
+      tech: [
+        "Azure Speech-to-Text",
+        "Whisper",
+        "Qdrant",
+        "Gemini AI",
+        "Redis",
+        "FastAPI",
+      ],
     },
   ],
   skills: {
-    languages: ["Python", "C++", "JavaScript", "TypeScript"],
-    backend: ["FastAPI", "Django", "Node.js"],
-    ai: ["TensorFlow", "PyTorch", "LangChain"],
-    databases: ["PostgreSQL", "MongoDB", "Redis"],
+    languages: ["Python", "C++", "JavaScript"],
+    backend: ["FastAPI", "Django", "Node.js", "REST APIs"],
+    ai: [
+      "TensorFlow",
+      "PyTorch",
+      "LangChain",
+      "Langgraph",
+      "Google ADK-A2A",
+      "Hugging Face",
+      "OpenAI",
+      "Gemini AI",
+      "Crew AI",
+      "MCP",
+    ],
+    databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Qdrant"],
+    devOps: ["Docker", "GitHub Actions"],
+    frontend: ["React.js", "Next.js", "Tailwind CSS"],
+    developerTools: ["Git", "GitHub", "Jupyter Notebook", "VS Code", "Postman"],
   },
   achievements: [
     "Won Vashisht ML Hackathon 2024",

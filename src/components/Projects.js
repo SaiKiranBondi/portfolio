@@ -2,6 +2,50 @@ import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import data from '../data';
 
+const renderMarkdownToHtml = (markdown) => {
+  let html = markdown;
+
+  // Convert headers
+  html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+  html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+  html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+  // Convert bold and italic
+  html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
+  html = html.replace(/_(.*?)_/gim, '<em>$1</em>');
+
+  // Handle ordered lists
+  // This is a more complex regex to capture multiple lines of ordered lists
+  // and wrap them in <ol> tags, while converting each item to <li>
+  html = html.replace(/(\n|^)(\d+\. .*(?:\n\d+\. .*)*)/g, (match, p1, p2) => {
+    const listItems = p2.split('\n').map(item => {
+      // Remove the number and dot, then trim
+      return `<li>${item.replace(/^\d+\. /, '').trim()}</li>`;
+    }).join('');
+    return `${p1}<ol>${listItems}</ol>`;
+  });
+
+  // Handle unordered lists
+  html = html.replace(/(\n|^)(- .*(?:\n- .*)*)/g, (match, p1, p2) => {
+    const listItems = p2.split('\n').map(item => {
+      // Remove the hyphen and trim
+      return `<li>${item.replace(/^- /, '').trim()}</li>`;
+    }).join('');
+    return `${p1}<ul>${listItems}</ul>`;
+  });
+
+  // Convert paragraphs (lines not starting with a tag)
+  // This needs to be done carefully after list processing
+  html = html.split('\n').map(line => {
+    if (!line.trim().startsWith('<') && line.trim() !== '') {
+      return `<p>${line.trim()}</p>`;
+    }
+    return line;
+  }).join('');
+
+  return html;
+};
+
 // Modal Component is now simpler
 const Modal = ({ project, onClose }) => {
   if (!project) return null;
@@ -10,9 +54,9 @@ const Modal = ({ project, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>&times;</button>
-        <img src={project.img} alt={project.title} className="modal-img" />
+        
         <h2>{project.title}</h2>
-        <p>{project.desc}</p>
+        <div dangerouslySetInnerHTML={{ __html: renderMarkdownToHtml(project.fullDescription) }} />
         {project.tech && (
           <div className="tech-stack">
             <strong>Technologies:</strong>
@@ -68,9 +112,15 @@ function Projects() {
         <div className="project-grid">
           {currentProjects.map((project, index) => (
             <div key={index} className="project-card">
-              <img src={project.img} alt={project.title} className="project-img" />
               <h3>{project.title}</h3>
-              <p>{truncate(project.desc, 100)}</p>
+              <div className="project-description" dangerouslySetInnerHTML={{ __html: renderMarkdownToHtml(project.desc) }} />
+              {project.tech && (
+                <div className="tech-stack">
+                  {project.tech.map((tech, i) => (
+                    <span key={i} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+              )}
               <button onClick={() => handleOpenModal(project)} className="read-more-btn">Read More</button>
             </div>
           ))}
@@ -80,7 +130,7 @@ function Projects() {
           {pastProjects.map((project, index) => (
             <div key={index} className="project-card">
               <h3>{project.title}</h3>
-              <p>{truncate(project.desc, 100)}</p>
+              <div className="project-description" dangerouslySetInnerHTML={{ __html: renderMarkdownToHtml(project.desc) }} />
                <div className="tech-stack">
                 {project.tech.map((tech, i) => (
                   <span key={i} className="tech-tag">{tech}</span>

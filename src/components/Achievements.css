@@ -1,6 +1,7 @@
 .achievements {
-  padding: 2rem;
-  background-color: #f9f9f9;
+  padding: 2rem 0; /* Adjusted padding */
+  width: 75vw; /* Set to 75vw */
+  margin: 0 auto; /* Centered */
 }
 .achievements ul {
   list-style-type: disc;

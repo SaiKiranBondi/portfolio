@@ -1,17 +1,75 @@
 .skills {
-  padding: 2rem;
+  padding: 1rem 0; /* Reduced padding and removed horizontal */
+  /* Removed background-color */
+  /* Removed border-radius */
+  /* Removed box-shadow */
+  margin: 2rem auto;
+  padding-top: 0;
+  width: 75vw; /* Set to 75vw as requested */
+  text-align: left; /* Changed to left align */
 }
+
+.skills h2 {
+  font-size: 2rem; /* Reduced font size */
+  color: #333;
+  margin-bottom: 0; /* Adjusted margin */
+  /* Removed position: relative; */
+  display: block; /* Changed to block for left alignment */
+  /* Removed left: 50%; transform: translateX(-50%); */
+}
+
+/* Removed .skills h2::after rule */
+
 .skill-category {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* Adjusted margin */
+  background-color: #ffffff;
+  padding: 1rem; /* Reduced padding */
+  border-radius: 10px;
+  border: 1px solid #e0e0e0; /* Added border for inner boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
 }
+
+.skill-category:hover {
+  transform: translateY(-3px); /* Reduced hover effect */
+}
+
+.skill-category h3 {
+  font-size: 1rem; /* Reduced font size */
+  color: #007acc;
+  margin-bottom: 1rem; /* Adjusted margin */
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.6rem; /* Adjusted padding */
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.5rem; /* Reduced gap */
 }
+
 .skill-tag {
   background-color: #007acc;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: 0.4rem 0.8rem; /* Reduced padding */
+  border-radius: 20px; /* Adjusted border-radius */
+  font-size: 0.8rem; /* Reduced font size */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-tag:hover {
+  background-color: #005f99;
+  transform: translateY(-1px) scale(1.02); /* Reduced hover effect */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.skill-categories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; /* Adjust gap between skill categories */
+  margin-top: 2rem; /* Space from the main heading */
 }
