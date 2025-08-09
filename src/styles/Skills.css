@@ -73,3 +73,52 @@
   gap: 1.5rem; /* Adjust gap between skill categories */
   margin-top: 2rem; /* Space from the main heading */
 }
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 0.5rem; /* Reduce padding on smaller screens */
+    width: 90vw; /* Use more width on smaller screens */
+  }
+
+  .skills h2 {
+    font-size: 1.8rem; /* Adjust heading font size */
+  }
+
+  .skill-categories-container {
+    grid-template-columns: 1fr; /* Stack skill categories in a single column */
+    gap: 1rem; /* Adjust gap */
+  }
+
+  .skill-category {
+    padding: 0.8rem; /* Adjust category padding */
+  }
+
+  .skill-category h3 {
+    font-size: 0.9rem; /* Adjust category title font size */
+  }
+
+  .skill-tag {
+    font-size: 0.7rem; /* Adjust skill tag font size */
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 0.25rem; /* Further reduce padding */
+    width: 95vw; /* Even more width on very small screens */
+  }
+
+  .skills h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill-category h3 {
+    font-size: 0.8rem;
+  }
+
+  .skill-tag {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

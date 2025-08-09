@@ -16,3 +16,35 @@
   list-style: none;
   padding: 0;
 }
+
+@media (max-width: 768px) {
+  .about {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .about-content-wrapper {
+    width: 90vw; /* Use more width on smaller screens */
+  }
+
+  .education-item h4 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .education-item p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content-wrapper {
+    width: 95vw; /* Even more width on very small screens */
+  }
+
+  .education-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .education-item p {
+    font-size: 0.8rem;
+  }
+}

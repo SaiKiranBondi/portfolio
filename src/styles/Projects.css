@@ -97,3 +97,66 @@
 .project-description {
   flex-grow: 1;
 }
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 1rem; /* Reduce padding on smaller screens */
+    width: 90vw; /* Use more width on smaller screens */
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack projects in a single column */
+  }
+
+  .project-card {
+    padding: 0.8rem; /* Adjust card padding */
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem; /* Adjust title font size */
+  }
+
+  .tech-tag {
+    font-size: 0.8rem; /* Adjust tech tag font size */
+    padding: 0.2rem 0.4rem;
+  }
+
+  .read-more-btn {
+    padding: 0.4rem 0.8rem; /* Adjust button padding */
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    width: 95%; /* Make modal wider on smaller screens */
+    padding: 1.5rem; /* Adjust modal padding */
+  }
+
+  .modal-close {
+    font-size: 1.5rem; /* Smaller close button */
+    top: 5px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 0.5rem; /* Further reduce padding */
+    width: 95vw; /* Even more width on very small screens */
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.8rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+}

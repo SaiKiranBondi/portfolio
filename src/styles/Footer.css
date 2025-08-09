@@ -4,3 +4,17 @@
   background-color: #333;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.8rem; /* Reduce padding on smaller screens */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.5rem; /* Further reduce padding */
+    font-size: 0.8rem; /* Further adjust font size */
+  }
+}

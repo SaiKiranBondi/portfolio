@@ -17,3 +17,42 @@
   text-decoration: none;
   color: #007acc;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .hero-img {
+    max-width: 120px; /* Make image smaller on mobile */
+    height: auto;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 0.5rem; /* Space between stacked links */
+    align-items: center; /* Center links when stacked */
+  }
+
+  .hero-links a {
+    margin: 0; /* Remove horizontal margin when stacked */
+    padding: 0.5rem 1rem; /* Add padding for better tap targets */
+    width: 80%; /* Make links take up more width */
+    box-sizing: border-box; /* Include padding in width */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem; /* Smaller font size for very small screens */
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}

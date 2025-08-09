@@ -2,8 +2,48 @@
   padding: 2rem 0; /* Adjusted padding */
   width: 75vw; /* Set to 75vw */
   margin: 0 auto; /* Centered */
+  padding-top: 0;
 }
 .achievements ul {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .achievements {
+    padding: 1rem 0; /* Adjust padding */
+    width: 90vw; /* Use more width on smaller screens */
+  }
+
+  .achievements h2 {
+    font-size: 1.8rem; /* Adjust heading font size */
+  }
+
+  .achievements ul {
+    padding-left: 15px; /* Adjust list padding */
+  }
+
+  .achievements li {
+    font-size: 0.95rem; /* Adjust list item font size */
+    margin-bottom: 0.5rem; /* Add some spacing between list items */
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements {
+    padding: 0.5rem 0; /* Further adjust padding */
+    width: 95vw; /* Even more width on very small screens */
+  }
+
+  .achievements h2 {
+    font-size: 1.5rem;
+  }
+
+  .achievements ul {
+    padding-left: 10px;
+  }
+
+  .achievements li {
+    font-size: 0.9rem;
+  }
 }

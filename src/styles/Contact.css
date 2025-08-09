@@ -1,6 +1,7 @@
 .contact {
   text-align: center;
   padding: 2rem;
+  padding-top: 0;
 }
 
 .contact-button {
@@ -140,8 +141,110 @@
 }
 
 @keyframes fadeInOut {
-  0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
-  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
-  90% { opacity: 1; transform: translateX(-50%) translateY(0); }
-  100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .contact h2 {
+    font-size: 1.8rem; /* Adjust heading font size */
+  }
+
+  .contact p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  .contact-button {
+    padding: 0.6rem 1.2rem; /* Adjust button padding */
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    width: 95%; /* Make modal wider on smaller screens */
+    padding: 1.5rem; /* Adjust modal padding */
+  }
+
+  .modal-content h3 {
+    font-size: 1.5rem; /* Adjust modal title font size */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: calc(100% - 16px); /* Adjust width for smaller padding */
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form .submit-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .confirmation-message {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 0.5rem; /* Further reduce padding */
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact p {
+    font-size: 0.85rem;
+  }
+
+  .contact-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .contact-form .submit-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .confirmation-message {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
 }

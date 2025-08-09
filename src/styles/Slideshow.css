@@ -51,3 +51,24 @@
   background-color: #717171; /* Active/hover dot color */
   border: 1px solid #717171; /* Match border to active color */
 }
+
+@media (max-width: 768px) {
+  .slideshow-container {
+    width: 95vw; /* Use more width on smaller screens */
+    height: 60vh; /* Adjust height for smaller screens */
+    min-height: 250px; /* Ensure a minimum height */
+  }
+
+  .dot {
+    height: 10px; /* Smaller dots */
+    width: 10px;
+    margin: 0 3px; /* Smaller margin between dots */
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshow-container {
+    height: 50vh; /* Further adjust height for very small screens */
+    min-height: 200px;
+  }
+}

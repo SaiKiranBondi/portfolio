@@ -17,3 +17,48 @@
   font-style: italic;
   color: #666;
 }
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 0.5rem; /* Reduce padding on smaller screens */
+    padding-top: 0;
+  }
+
+  .experience-content-wrapper {
+    width: 90vw; /* Use more width on smaller screens */
+  }
+
+  .experience-item h3 {
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
+  }
+
+  .experience-item .duration {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .experience-item ul {
+    padding-left: 1.5rem; /* Adjust list padding */
+  }
+
+  .experience-item li {
+    font-size: 0.9rem; /* Adjust list item font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-content-wrapper {
+    width: 95vw; /* Even more width on very small screens */
+  }
+
+  .experience-item h3 {
+    font-size: 1rem;
+  }
+
+  .experience-item .duration {
+    font-size: 0.8rem;
+  }
+
+  .experience-item li {
+    font-size: 0.8rem;
+  }
+}
