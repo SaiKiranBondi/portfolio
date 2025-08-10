@@ -9,6 +9,7 @@
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */ /* Removed this line */
   padding-bottom: 20px; /* Added padding-bottom inside the container */
   background-color: white; /* Set background to white */
+  padding-top: 0;
 }
 
 .slideshow-image {
