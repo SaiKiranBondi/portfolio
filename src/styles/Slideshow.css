@@ -58,6 +58,7 @@
     width: 95vw; /* Use more width on smaller screens */
     height: 60vh; /* Adjust height for smaller screens */
     min-height: 250px; /* Ensure a minimum height */
+    padding-top: 0;
   }
 
   .dot {
@@ -71,5 +72,6 @@
   .slideshow-container {
     height: 50vh; /* Further adjust height for very small screens */
     min-height: 200px;
+    padding-top: 0;
   }
 }
